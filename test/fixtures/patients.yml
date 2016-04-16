@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  identification: 1
+  chief_response: MyString
+  age: 1
+  walking: MyString
+  mental_state: MyString
+  hospital_taken_to: MyString
+  allergies: MyString
+  any_other_details: MyString
+
+two:
+  name: MyString
+  identification: 1
+  chief_response: MyString
+  age: 1
+  walking: MyString
+  mental_state: MyString
+  hospital_taken_to: MyString
+  allergies: MyString
+  any_other_details: MyString

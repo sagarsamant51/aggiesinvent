@@ -1,0 +1,59 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@patient) do |f| %>
+    <% if @patient.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@patient.errors.count, "error") %> prohibited this patient from being saved:</h2>
+  
+        <ul>
+        <% @patient.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+  
+    <div class="field">
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.label :identification %><br>
+      <%= f.number_field :identification %>
+    </div>
+    <div class="field">
+      <%= f.label :chief_response %><br>
+      <%= f.text_field :chief_response %>
+    </div>
+    <div class="field">
+      <%= f.label :age %><br>
+      <%= f.number_field :age %>
+    </div>
+    <div class="field">
+      <%= f.label :walking %><br>
+      <%= f.text_field :walking %>
+    </div>
+    <div class="field">
+      <%= f.label :mental_state %><br>
+      <%= f.text_field :mental_state %>
+    </div>
+    <div class="field">
+      <%= f.label :hospital_taken_to %><br>
+      <%= f.text_field :hospital_taken_to %>
+    </div>
+    <div class="field">
+      <%= f.label :allergies %><br>
+      <%= f.text_field :allergies %>
+    </div>
+    <div class="field">
+      <%= f.label :any_other_details %><br>
+      <%= f.text_field :any_other_details %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>
+
+  </div>
+</div>
+

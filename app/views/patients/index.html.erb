@@ -1,0 +1,58 @@
+
+  <p id="notice"><%= notice %></p>
+
+  <h1 class="page-header">Listing Patients</h1>
+  <%=form_tag patients_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+  <%end %>
+  <table class="class=span9 center-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Identification</th>
+        <th>Chief response</th>
+        <th>Age</th>
+        <th>Walking</th>
+        <th>Mental state</th>
+        <th>Hospital taken to</th>
+        <th>Allergies</th>
+        <th>Any other details</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <% @patients.each do |patient| %>
+        <tr>
+          <td><%= patient.name %></td>
+          <td><%= patient.identification %></td>
+          <td><%= patient.chief_response %></td>
+          <td><%= patient.age %></td>
+          <td><%= patient.walking %></td>
+          <td><%= patient.mental_state %></td>
+          <td><%= patient.hospital_taken_to %></td>
+          <td><%= patient.allergies %></td>
+          <td><%= patient.any_other_details %></td>
+          <td><%= link_to 'Show', patient %></td>
+          <td><%= link_to 'Edit', edit_patient_path(patient) %></td>
+          <td><%= link_to 'Destroy', patient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  
+  <br>
+  
+  <%= link_to 'New Patient', new_patient_path %>
+
+
+<% form_tag patients_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+  <% end %>
+

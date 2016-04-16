@@ -1,0 +1,14 @@
+table td{
+    padding:20px;
+}
+table th{
+    padding:10px;
+}
+.page-header{
+    text-align: center;
+}
+.center-table
+{
+  margin: 0 auto; 
+  float: none ;
+}

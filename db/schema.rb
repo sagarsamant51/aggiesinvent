@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20160416152314) do
     t.string   "any_other_details"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
+    t.string   "color"
   end
 
 end

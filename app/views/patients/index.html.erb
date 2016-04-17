@@ -1,13 +1,16 @@
 
   <p id="notice"><%= notice %></p>
-
   <h1 class="page-header">Listing Patients</h1>
-  <%=form_tag patients_path, :method => 'get' do %>
-  <p>
+   <h1 class= "page-header"><span class='special-color-black'> Black <%= Patient.where(:color=>'Black').count  %></span> ,<span class='special-color-red'> Red <%= Patient.where(:color=>'Red').count %></span> ,<span class='special-color-green'> Green <%= Patient.where(:color=>'Green').count %></span>,<span class='special-color-yellow'> Yellow <%= Patient.where(:color=>'Yellow').count %></span></h1>  
+  <div class='page-header'>
+    <%=form_tag patients_path, :method => 'get' do %>
+    <p>
     <%= text_field_tag :search, params[:search] %>
     <%= submit_tag "Search", :name => nil %>
-  </p>
+    </p>
   <%end %>
+  </div>
+  
   <table class="class=span9 center-table">
     <thead>
       <tr>
@@ -27,7 +30,15 @@
     <tbody>
       <% @patients.each do |patient| %>
         <tr>
-          <td><%= patient.name %></td>
+          <% if patient.color == 'Red' %>
+          <td class = 'special-color-red'> <%= patient.name %> </td>
+          <%elsif patient.color =='Yellow'%>
+          <td class = 'special-color-yellow'> <%= patient.name %> </td>
+          <%elsif patient.color =='Green'%>
+          <td class = 'special-color-green'> <%= patient.name %> </td>
+          <%elsif patient.color =='Black'%>
+          <td class = 'special-color-black'> <%= patient.name %> </td>
+          <%end%>
           <td><%= patient.identification %></td>
           <td><%= patient.chief_response %></td>
           <td><%= patient.age %></td>
@@ -47,12 +58,4 @@
   <br>
   
   <%= link_to 'New Patient', new_patient_path %>
-
-
-<% form_tag patients_path, :method => 'get' do %>
-  <p>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search", :name => nil %>
-  </p>
-  <% end %>
 

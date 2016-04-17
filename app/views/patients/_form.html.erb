@@ -12,10 +12,13 @@
         </ul>
       </div>
     <% end %>
-  
     <div class="field">
       <%= f.label :name %><br>
       <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.label :color %><br>
+      <%= select(:patient, :color, ['Red','Green','Yellow','Black']) %>
     </div>
     <div class="field">
       <%= f.label :identification %><br>
@@ -31,11 +34,11 @@
     </div>
     <div class="field">
       <%= f.label :walking %><br>
-      <%= f.text_field :walking %>
+      <%= select(:patient, :walking, ['yes','no']) %>
     </div>
     <div class="field">
       <%= f.label :mental_state %><br>
-      <%= f.text_field :mental_state %>
+      <%= select(:patient, :mental_state, ['stable','unstable']) %>
     </div>
     <div class="field">
       <%= f.label :hospital_taken_to %><br>

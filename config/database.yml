@@ -29,7 +29,7 @@ development:
   adapter: postgresql
   encoding: unicode
   template: template0
-  database: project_development
+  database: pro_development
   pool: 5
   username: 
   password:
@@ -38,7 +38,7 @@ test: &TEST
   adapter: postgresql
   encoding: unicode
   template: template0
-  database: project_test
+  database: pro_test
   pool: 5
   username: 
   password:
@@ -47,7 +47,7 @@ production:
   adapter: postgresql
   encoding: unicode
   template: template0
-  database: project_production
+  database: pro_production
   pool: 5
   username: 
   password:

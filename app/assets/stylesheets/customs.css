@@ -12,3 +12,26 @@ table th{
   margin: 0 auto; 
   float: none ;
 }
+.special-color-red
+{
+    background-color: rgb(255,128,128) ; 
+    font-weight: bold;
+}
+
+.special-color-green
+{
+    background-color: rgb(128,255,128) ; 
+     font-weight: bold;
+}
+
+.special-color-yellow
+{
+    background-color: rgb(255,255,0) ; 
+     font-weight: bold;
+}
+
+.special-color-black
+{
+    background-color: rgb(175,158,154) ; 
+     font-weight: bold;
+}
